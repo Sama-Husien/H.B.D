@@ -1,0 +1,217 @@
+:root {
+    --bg-color: #f0e6e8;
+    --container-bg: #ffffff;
+    --text-color: #333333;
+    --card-bg: #f9f0f5;
+    --title-color: #d14d72;
+    --button-bg: #d14d72;
+    --button-hover: #b13d62;
+    --gift-button-bg: #d14d72;
+    --gift-button-hover: #d14d72;
+    --wish-highlight-bg: #f9f0f5;
+    --wish-highlight-border: #d14d72;
+}
+
+.dark-mode {
+    --bg-color: #2c2c2c;
+    --container-bg: #3a3a3a;
+    --text-color: #e0e0e0;
+    --card-bg: #4a4a4a;
+    --title-color: #ff9eb5;
+    --button-bg: #ff9eb5;
+    --button-hover: #ff7a9a;
+    --gift-button-bg: #5cbb60;
+    --gift-button-hover: #4fa853;
+    --wish-highlight-bg: #4a4a4a;
+    --wish-highlight-border: #ff9eb5;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    background-color: var(--container-bg);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 40px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    color: var(--title-color);
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.name {
+    color: var(--button-hover);
+}
+
+.cake {
+    font-size: 5em;
+    margin: 20px 0;
+    animation: bounce 2s infinite;
+}
+
+.message {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+button {
+    background-color: var(--button-bg);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.1em;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: var(--button-hover);
+    transform: translateY(-2px);
+}
+
+#giftButton {
+    background-color: var(--gift-button-bg);
+}
+
+#giftButton:hover {
+    background-color: var(--gift-button-hover);
+}
+
+.hidden {
+    display: none;
+}
+
+.big-message {
+    font-family: 'Pacifico', cursive;
+    font-size: 2em;
+    color: var(--title-color);
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.content video {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.icon {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    transform: rotate(45deg);
+    opacity: 0.7;
+}
+
+.mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--container-bg);
+    color: var(--text-color);
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#wishes p {
+    background-color: var(--wish-highlight-bg);
+    border-left: 4px solid var(--wish-highlight-border);
+    padding: 15px 20px 15px 45px;
+    margin: 20px 0;
+    border-radius: 0 10px 10px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    text-align: left;
+    font-size: 1.05em;
+    line-height: 1.7;
+}
+
+#wishes p:hover {
+    transform: translateX(5px);
+    box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.wish-icon {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 20px;
+    height: 20px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .message, #wishes p {
+        font-size: 1em;
+    }
+
+    .big-message {
+        font-size: 1.5em;
+    }
+
+    .cake {
+        font-size: 4em;
+    }
+}
+
+.ahmed{
+    color: #d14d72;
+    font-family: 'Pacifico', cursive;
+    font-size: larger;
+}
+
+#wishes p span{
+    color: #d14d72;
+    font-family: 'Pacifico', cursive;
+    font-size: larger;
+}
